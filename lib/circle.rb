@@ -4,11 +4,14 @@ class Circle < GeometricBase
   attr_writer :radius
 
   def initialize(radius)
+    @radius = radius
   end
-// TESTEEEEEEEEEEEEEE
+
   def area
+    multiply(PI, exponentiation(@radius, 2))
   end
 
   def perimeter
+    multiply(multiply(2, PI), @radius)
   end
 end
